@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+   {% load static %}
+
+   {% include 'head.html' %}
+    <style>
+       html,
+       body,
+       header,
+       .jarallax {
+       height: 1000px;
+       min-height: 800px;
+       }
+    </style>
+ 
+   <body>
+      <!-- Intro Section -->
+      
+      <div class="view jarallax" data-jarallax='{"speed": 0.2}'
+         style="background-image: url('https://www.kworldnow.com/wp-content/uploads/2020/08/korean-food-1.png'); background-repeat: no-repeat; background-size: cover; background-position: center center;margin-top:-100px;">
+         <div class="mask rgba-indigo-light">
+            <div class="container h-100 d-flex justify-content-center align-items-center">
+               <div class="row">
+                  <div class="col-md-12 wow fadeIn">
+                     <div class="text-center white-text">
+                        <ul class="list-unstyled">
+                           <li>
+                              <h1 class="display-4 font-weight-bold white-text wow fadeIn"
+                                 data-wow-delay="0.3s">
+                                 <strong>냉장구에 남은 재료로 뭘 만들 수 있을까?</strong>
+                              </h1>
+                           </li>
+                           <li>
+                              <h5 class="white-text description mb-5 wow fadeIn" data-wow-delay="0.4s">
+                                 요리마법사 | {{total_recipes}} 레시피
+                              </h5>
+                           </li>
+                           <hr>
+                           <form action="{% url 'search' %}" method="get">
+                              <!--Accordion wrapper-->
+                              <div class="accordion md-accordion" id="accordionEx" role="tablist" aria-multiselectable="true">
+                                 <!-- Accordion card -->
+                                 <div class="card">
+                                    <!-- Card header -->
+                                    <div class="card-header" role="tab" id="headingOne1">
+                                       <a data-toggle="collapse" data-parent="#accordionEx" href="#collapseOne1" aria-expanded="true"
+                                          aria-controls="collapseOne1">
+                                          <h5 class="mb-0">
+                                             재료 입력 <i class="fas fa-angle-down rotate-icon"></i>
+                                          </h5>
+                                          <middle class="text-mute">베이킹</middle>
+                                       </a>
+                                    </div>
+                                    <!-- Card body -->
+                                    <div id="collapseOne1" class="collapse show" role="tabpanel" aria-labelledby="headingOne1" data-parent="#accordionEx">
+                                       <div class="card-body">
+                                          <!-- Material checked -->
+                                          <div class="form-check form-check-inline">
+                                             <input type="radio" class="form-check-input" value="on" id="egg" name="egg">
+                                             <label class="form-check-label" for="egg">egg</label>
+                                          </div>
+                                          <div class="form-check form-check-inline">
+                                             <input type="radio" class="form-check-input" value="on" id="milk" name="milk">
+                                             <label class="form-check-label" for="milk">milk</label>
+                                          </div>
+                                          <div class="form-check form-check-inline">
+                                             <input type="radio" class="form-check-input" value="on" id="rice" name="rice">
+                                             <label class="form-check-label" for="rice">rice</label>
+                                          </div>
+                                          <div class="form-check form-check-inline">
+                                             <input type="radio" class="form-check-input" value="on" id="cabbage" name="cabbage">
+                                             <label class="form-check-label" for="cabbage">cabbage</label>
+                                          </div>
+                                          <div class="form-check form-check-inline">
+                                             <input type="radio" class="form-check-input" value="on" id="chicken" name="chicken">
+                                             <label class="form-check-label" for="chicken">chicken</label>
+                                          </div>
+                                          <div class="form-check form-check-inline">
+                                             <input type="radio" class="form-check-input" value="on" id="sugar" name="sugar">
+                                             <label class="form-check-label" for="sugar">sugar</label>
+                                          </div>
+                                          <div class="form-check form-check-inline">
+                                             <input type="radio" class="form-check-input" value="on" id="gouchujang" name="gouchujang">
+                                             <label class="form-check-label" for="gouchujang">gouchujang</label>
+                                          </div>
+                                          <div class="form-check form-check-inline">
+                                             <input type="radio" class="form-check-input" value="on" id="밀" name="밀">
+                                             <label class="form-check-labell" for="밀">밀</label>
+                                          </div>
+                                       </div>
+                                       <middle class="text-muted">Baking</middle>
+                                    </div>
+                                    <div id="collapseOne1" class="collapse show" role="tabpanel" aria-labelledby="headingOne1" data-parent="#accordionEx">
+                                       <div class="card-body">
+                                          <!-- Material checked -->
+                                          <div class="form-check form-check-inline">
+                                             <input type="radio" class="form-check-input" value="on" id="egg" name="egg">
+                                             <label class="form-check-label" for="egg">egg</label>
+                                          </div>
+                                          <div class="form-check form-check-inline">
+                                             <input type="radio" class="form-check-input" value="on" id="milk" name="milk">
+                                             <label class="form-check-label" for="milk">milk</label>
+                                          </div>
+                                          <div class="form-check form-check-inline">
+                                             <input type="radio" class="form-check-input" value="on" id="rice" name="rice">
+                                             <label class="form-check-label" for="rice">rice</label>
+                                          </div>
+                                          <div class="form-check form-check-inline">
+                                             <input type="radio" class="form-check-input" value="on" id="cabbage" name="cabbage">
+                                             <label class="form-check-label" for="cabbage">cabbage</label>
+                                          </div>
+                                          <div class="form-check form-check-inline">
+                                             <input type="radio" class="form-check-input" value="on" id="chicken" name="chicken">
+                                             <label class="form-check-label" for="chicken">chicken</label>
+                                          </div>
+                                          <div class="form-check form-check-inline">
+                                             <input type="radio" class="form-check-input" value="on" id="sugar" name="sugar">
+                                             <label class="form-check-label" for="sugar">sugar</label>
+                                          </div>
+                                          <div class="form-check form-check-inline">
+                                             <input type="radio" class="form-check-input" value="on" id="gouchujang" name="gouchujang">
+                                             <label class="form-check-label" for="gouchujang">gouchujang</label>
+                                          </div>
+                                          <div class="form-check form-check-inline">
+                                             <input type="radio" class="form-check-input" value="on" id="밀" name="밀">
+                                             <label class="form-check-labell" for="밀">밀</label>
+                                          </div>
+                                       </div>
+                                       <middle class="text-muted">Baking</middle>
+                                    </div>
+                                    <div id="collapseOne1" class="collapse show" role="tabpanel" aria-labelledby="headingOne1" data-parent="#accordionEx">
+                                       <div class="card-body">
+                                          <!-- Material checked -->
+                                          <div class="form-check form-check-inline">
+                                             <input type="radio" class="form-check-input" value="on" id="egg" name="egg">
+                                             <label class="form-check-label" for="egg">egg</label>
+                                          </div>
+                                          <div class="form-check form-check-inline">
+                                             <input type="radio" class="form-check-input" value="on" id="milk" name="milk">
+                                             <label class="form-check-label" for="milk">milk</label>
+                                          </div>
+                                          <div class="form-check form-check-inline">
+                                             <input type="radio" class="form-check-input" value="on" id="rice" name="rice">
+                                             <label class="form-check-label" for="rice">rice</label>
+                                          </div>
+                                          <div class="form-check form-check-inline">
+                                             <input type="radio" class="form-check-input" value="on" id="cabbage" name="cabbage">
+                                             <label class="form-check-label" for="cabbage">cabbage</label>
+                                          </div>
+                                          <div class="form-check form-check-inline">
+                                             <input type="radio" class="form-check-input" value="on" id="chicken" name="chicken">
+                                             <label class="form-check-label" for="chicken">chicken</label>
+                                          </div>
+                                          <div class="form-check form-check-inline">
+                                             <input type="radio" class="form-check-input" value="on" id="sugar" name="sugar">
+                                             <label class="form-check-label" for="sugar">sugar</label>
+                                          </div>
+                                          <div class="form-check form-check-inline">
+                                             <input type="radio" class="form-check-input" value="on" id="gouchujang" name="gouchujang">
+                                             <label class="form-check-label" for="gouchujang">gouchujang</label>
+                                          </div>
+                                          <div class="form-check form-check-inline">
+                                             <input type="radio" class="form-check-input" value="on" id="밀" name="밀">
+                                             <label class="form-check-labell" for="밀">밀</label>
+                                          </div>
+                                       </div>
+                                       <middle class="text-muted">Baking</middle>
+                                    </div>
+                                    <div id="collapseOne1" class="collapse show" role="tabpanel" aria-labelledby="headingOne1" data-parent="#accordionEx">
+                                       <div class="card-body">
+                                          <!-- Material checked -->
+                                          <div class="form-check form-check-inline">
+                                             <input type="radio" class="form-check-input" value="on" id="egg" name="egg">
+                                             <label class="form-check-label" for="eg">egg</label>
+                                          </div>
+                                          <div class="form-check form-check-inline">
+                                             <input type="radio" class="form-check-input" value="on" id="milk" name="milk">
+                                             <label class="form-check-label" for="milk">milk</label>
+                                          </div>
+                                          <div class="form-check form-check-inline">
+                                             <input type="radio" class="form-check-input" value="on" id="rice" name="rice">
+                                             <label class="form-check-label" for="rice">rice</label>
+                                          </div>
+                                          <div class="form-check form-check-inline">
+                                             <input type="radio" class="form-check-input" value="on" id="cabbage" name="cabbage">
+                                             <label class="form-check-label" for="cabbage">cabbage</label>
+                                          </div>
+                                          <div class="form-check form-check-inline">
+                                             <input type="radio" class="form-check-input" value="on" id="chicken" name="chicken">
+                                             <label class="form-check-label" for="chicken">chicken</label>
+                                          </div>
+                                          <div class="form-check form-check-inline">
+                                             <input type="radio" class="form-check-input" value="on" id="sugar" name="sugar">
+                                             <label class="form-check-label" for="sugar">sugar</label>
+                                          </div>
+                                          <div class="form-check form-check-inline">
+                                             <input type="radio" class="form-check-input" value="on" id="gouchujang" name="gouchujang">
+                                             <label class="form-check-label" for="gouchujang">gouchujang</label>
+                                          </div>
+                                          <div class="form-check form-check-inline">
+                                             <input type="radio" class="form-check-input" value="on" id="밀" name="밀">
+                                             <label class="form-check-labell" for="밀">밀</label>
+                                          </div>
+                                       </div>
+                                       <middle class="text-muted">Baking</middle>
+                                    </div>
+                                    <div id="collapseOne1" class="collapse show" role="tabpanel" aria-labelledby="headingOne1" data-parent="#accordionEx">
+                                       <div class="card-body">
+                                          <!-- Material checked -->
+                                          <div class="form-check form-check-inline">
+                                             <input type="radio" class="form-check-input" value="on" id="egg" name="egg">
+                                             <label class="form-check-label" for="eg">egg</label>
+                                          </div>
+                                          <div class="form-check form-check-inline">
+                                             <input type="radio" class="form-check-input" value="on" id="milk" name="milk">
+                                             <label class="form-check-label" for="milk">milk</label>
+                                          </div>
+                                          <div class="form-check form-check-inline">
+                                             <input type="radio" class="form-check-input" value="on" id="rice" name="rice">
+                                             <label class="form-check-label" for="rice">rice</label>
+                                          </div>
+                                          <div class="form-check form-check-inline">
+                                             <input type="radio" class="form-check-input" value="on" id="cabbage" name="cabbage">
+                                             <label class="form-check-label" for="cabbage">cabbage</label>
+                                          </div>
+                                          <div class="form-check form-check-inline">
+                                             <input type="radio" class="form-check-input" value="on" id="chicken" name="chicken">
+                                             <label class="form-check-label" for="chicken">chicken</label>
+                                          </div>
+                                          <div class="form-check form-check-inline">
+                                             <input type="radio" class="form-check-input" value="on" id="sugar" name="sugar">
+                                             <label class="form-check-label" for="sugar">sugar</label>
+                                          </div>
+                                          <div class="form-check form-check-inline">
+                                             <input type="radio" class="form-check-input" value="on" id="gouchujang" name="gouchujang">
+                                             <label class="form-check-label" for="gouchujang">gouchujang</label>
+                                          </div>
+                                          <div class="form-check form-check-inline">
+                                             <input type="radio" class="form-check-input" value="on" id="밀" name="밀">
+                                             <label class="form-check-labell" for="밀">밀</label>
+                                          </div>
+                                       </div>
+                                    </div>
+                                 </div>
+                              </div>
+                              <!-- Accordion card -->
+                              <li class="wow fadeIn" data-wow-delay="0.4s">
+                                 <div class="md-form mb-0">
+                                    <input type="text" id="form51" class="form-control" name="search">
+                                    <label for="form51" class="">서츠</label>
+                                 </div>
+                                 <button class="btn btn-white btn-rounded btn-lg orange-text font-weight-bold ml-lg-0" type="submit">
+                                 <i class="fas fa-search orange-text mr-2" aria-hidden="true"></i>레시피 찾기</button>
+                              </li>
+                        </ul>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+      </form>
+      <!-- Footer -->
+      <footer class="page-footer text-center text-md-left unique-color-dark pt-0">
+      </footer>
+      <!-- Footer -->
+      {% include 'scripts.html' %}
+      <script>
+         // Animation init
+         new WOW().init();
+         
+         // Material Select Initialization
+         $(document).ready(function () {
+           $('.mdb-select').material_select();
+         });
+      </script>
+   </body>
+</html>

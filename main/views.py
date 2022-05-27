@@ -19,9 +19,9 @@ def search(request):
         query = request.GET.get("search")
         queryset = recipes.filter(Q(title__icontains=query))
 
-    if request.GET.get("milk"):
-        results = recipes.filter(Q(topic__title__icontains="milk"))
-        topic = "milk"
+    if request.GET.get("쌀"):
+        results = recipes.filter(Q(topic__title__icontains="쌀"))
+        topic = "쌀"
     elif request.GET.get("egg"):
         results = recipes.filter(Q(topic__title__icontains="egg"))
         topic="egg"

@@ -10,7 +10,7 @@
                <div class="col-md-12">
                   <div class="card">
                      <div class="card-body">
-                        <h3>{{query}}: {{total}} Result (s) Found.</h3>
+                        <h3>{{query}}: {{total}}개의 레시피가 있다.</h3>
                      </div>
                   </div>
                </div>
@@ -42,7 +42,7 @@
                            <a href="{{recipe.get_url}}" class="black-text">{{recipe.title}}</a>
                            <!-- Text -->
                            <p class="card-title text-muted font-small mt-3 mb-2">{{recipe.description|safe|slice:":150"}}</p>
-                           <a type="button" class="btn btn-flat text-primary p-0 mx-0" href="{{recipe.get_url}}">Read more<i class="fa fa-angle-right ml-2"></i></a>
+                           <a type="button" class="btn btn-flat text-primary p-0 mx-0" href="{{recipe.get_url}}">더 보기<i class="fa fa-angle-right ml-2"></i></a>
                         </div>
                      </div>
                      <!-- Card -->
@@ -133,7 +133,7 @@
                <!-- Pagination -->
                
                <div class="text-center mt-5">
-                  <a href="#">홈페이즈로 돌아가기</a>
+                  <a href="#">홈페이지로 돌아가기</a>
                </div>
             </section>
             <!--Section: Content-->
